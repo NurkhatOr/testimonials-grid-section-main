@@ -1,0 +1,145 @@
+/* Variables */
+root {
+  /* Primary Colors */
+  --mod_violet: hsl(263, 55%, 52%);
+  --vry_drk_gr_blue: hsl(217, 19%, 35%);
+  --vry_drk_bl_blue: hsl(219, 29%, 14%);
+  /* Neutral Colors */
+  --lght_gry: hsl(0, 0%, 81%);
+  --lght_gry_blue: hsl(210, 46%, 95%);
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  margin-bottom: 1.5625rem;
+  font-size: 1rem;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.5625rem;
+  text-align: left;
+}
+
+.container {
+  max-width: 69.375rem;
+  margin-inline: auto;
+  margin-block: 2rem;
+  padding: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+figure {
+  margin: 0;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.card_1 {
+  position: relative;
+  background-color: hsl(263, 55%, 52%);
+  color: #fff;
+}
+
+.card_2 {
+  background-color: hsl(217, 19%, 35%);
+  color: #fff;
+}
+
+.card_3 {
+  background-color: #fff;
+  color: hsl(217, 19%, 35%);
+}
+
+.card_4 {
+  background-color: hsl(219, 29%, 14%);
+  color: #fff;
+}
+
+.card_5 {
+  background-color: #fff;
+  color: hsl(217, 19%, 35%);
+}
+
+figcaption {
+  margin-bottom: 1.375rem;
+  display: flex;
+}
+
+figcaption span {
+  display: block;
+}
+
+figcaption img {
+  width: 32px;
+  border: 2px solid hsla(263, 55%, 52%, 0.5);
+  border-radius: 50%;
+}
+
+.client-info span:last-child,
+p {
+  opacity: 0.5;
+}
+
+.quotation_mark {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  opacity: 0.2;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1rem;
+}
+
+blockquote {
+  margin: 0;
+  z-index: 100;
+}
+
+.testimonial_grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 40em) {
+  .testimonial_grid {
+    grid-template-columns: repeat(4, 1fr);
+    width: min(95%, 70rem);
+  }
+
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+
+  .card_5 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
